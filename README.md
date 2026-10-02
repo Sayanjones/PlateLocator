@@ -132,8 +132,4 @@ assets/              sample images and result figures
 - OCR on the crop to read the plate text.
 - A YOLO baseline for comparison.
 
-## Credits
-
-Dataset by andrewmvd on Kaggle. Original approach from the AI with Noor tutorial linked above.
-
 MIT licensed, see `LICENSE`.
