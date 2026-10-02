@@ -135,6 +135,6 @@ assets/              sample images and result figures
 - Augmentation that moves the box with the image (flips, shifts, scale).
 - An IoU-based loss instead of MSE, since MSE doesn't directly care about overlap.
 - OCR on the crop to read the plate text.
-- A YOLO baseline for comparison.
+- A YOLO baseline for comparison..
 
 MIT licensed, see `LICENSE`.
