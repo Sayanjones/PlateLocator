@@ -45,23 +45,28 @@ I started from the "Car License Plate Detection Using Deep Learning | CNN & VGG1
 
 ## Results
 
-Validation MSE at the end of training, from the notebook run:
+Evaluated on the held-out test split (44 images out of 433 total):
 
-| Model | Val MSE |
-|---|---|
-| Small CNN from scratch | 0.0182 |
-| VGG16 (frozen) + dense head | 0.0100 |
+| Model Stage | Test MSE | Mean IoU | Median IoU | IoU >= 0.5 | IoU >= 0.75 |
+|---|---|---|---|---|---|
+| VGG16 (frozen) + dense head | 0.15579 | 0.025 | 0.000 | 2.3% | 0.0% |
+| VGG16 (fine-tuned block5) | 0.15242 | 0.025 | 0.000 | 2.3% | 0.0% |
 
-Pretrained features cut the validation error nearly in half, which makes sense with only 433 images. The run never measured IoU. After training with this repo, `python -m src.evaluate` prints it and saves a green-vs-red comparison to `assets/results/test_predictions.png`.
+After training, `python -m src.evaluate` prints these metrics and saves a visual green-vs-red ground truth vs prediction comparison to `assets/results/test_predictions.png`.
 
-The sample predictions in `assets/results/` come from the notebook run. The weights file is large (VGG16 alone is around 60 MB), so it is not committed.
+The sample predictions in `assets/results/` come from the evaluation run. The weights file is large (VGG16 alone is around 60 MB), so it is not committed.
 
 ## Setup
 
 ```bash
 git clone https://github.com/Sayanjones/car-plate-detection.git
 cd car-plate-detection
-python -m venv .venv && source .venv/bin/activate
+python -m venv .venv
+# On Linux/macOS:
+source .venv/bin/activate
+# On Windows (PowerShell):
+.\.venv\Scripts\Activate.ps1
+
 pip install -r requirements.txt
 ```
 

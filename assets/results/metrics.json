@@ -1,0 +1,8 @@
+{
+  "test_mse": 0.15242019295692444,
+  "test_mean_iou": 0.018884923309087753,
+  "finetuned": true,
+  "n_train": 350,
+  "n_val": 39,
+  "n_test": 44
+}
