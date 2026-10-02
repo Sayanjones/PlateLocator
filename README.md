@@ -32,7 +32,7 @@ There is no confidence score. The model always returns exactly one box, so an im
 
 ## Where this came from
 
-I started from the "Car License Plate Detection Using Deep Learning | CNN & VGG16" tutorial by AI with Noor on YouTube, then rebuilt it. The tutorial gets you a working model and app. Running it carefully turned up several problems, listed next, and fixing them is what this repo is about.
+I started from the "Car License Plate Detection Using Deep Learning | CNN & VGG16" problem statement from Kaggle, then rebuilt it. Running it carefully turned up several problems, listed next, and fixing them is what this repo is about.
 
 ## What I changed
 
